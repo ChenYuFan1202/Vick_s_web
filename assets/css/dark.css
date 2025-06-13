@@ -1659,3 +1659,12 @@ p.comment-mes {
         font-size: 20px;
     }
 }
+
+@media (max-width: 768px) {
+  .welcome-sec,
+  .welcome-content,
+  .page-marg {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
