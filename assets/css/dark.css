@@ -1668,3 +1668,19 @@ p.comment-mes {
     padding-right: 16px;
   }
 }
+
+/* 預設不要讓內容卡片有手指樣式 */
+.award-item,
+.award-content,
+.expert-box,
+.expert-con {
+  cursor: default;
+}
+
+/* 如果真的有超連結包起來，就恢復 pointer */
+a .award-item,
+a .award-content,
+a .expert-box,
+a .expert-con {
+  cursor: pointer;
+}
