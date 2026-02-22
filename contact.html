@@ -45,17 +45,17 @@
                     <div class="user-img">
                         <img src="assets/img/user/Vick.jpg" alt="">
                     </div>
-                    <h2 class="name">范振宇（Vick）</h2>
-                    <p class="user-role">清大服科所研究生（NTHU ISS）</p>
+                    <h2 class="name">范振宇 (Vick)</h2>
+                    <p class="user-role">清大服科所研究生 (NTHU ISS)</p>
                 </div>
 
                 <div class="menu">
                     <ul class="menu-ul">
-                        <li class="menu-list"><a href="index.html" class="menu-link"><span class="icofont-home"></span> Home</a></li>
-                        <li class="menu-list"><a href="about me.html" class="menu-link"><span class="icofont-notepad"></span> About me</a></li>
-                        <li class="menu-list"><a href="portfolio.html" class="menu-link"><span class="icofont-code-alt"></span> Portfolio</a></li>
-                        <li class="menu-list"><a href="stories.html" class="menu-link"><span class="icofont-oscommerce"></span> Stories</a></li>
-                        <li class="menu-list"><a href="contact.html" class="menu-link"><span class="icofont-contact-add"></span> Contact</a></li>
+                        <li class="menu-list"><a href="index.html" class="menu-link"><span class="icofont-home"></span>Home</a></li>
+                        <li class="menu-list"><a href="about me.html" class="menu-link"><span class="icofont-notepad"></span>About me</a></li>
+                        <li class="menu-list"><a href="portfolio.html" class="menu-link"><span class="icofont-code-alt"></span>Portfolio</a></li>
+                        <li class="menu-list"><a href="stories.html" class="menu-link"><span class="icofont-oscommerce"></span>Stories</a></li>
+                        <li class="menu-list"><a href="contact.html" class="menu-link"><span class="icofont-contact-add"></span>Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -88,9 +88,12 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-4 col-sm-6 col-12 mb-3 wow slideInUp" data-wow-duration="1000ms">
-                                <a href="https://www.linkedin.com/in/chen-yu-fan-15600125a/" target="new">
+                                <a href="https://www.linkedin.com/in/chen-yu-fan-vick/" target="new">
                                 <div class="contact-card">
                                     <i class="icofont-linkedin"></i>
+                                    <p class="info">
+                                        linkedin.com/in/chen-yu-fan-vick
+                                    </p>
                                 </div>
                                 </a>
                             </div>
@@ -98,6 +101,9 @@
                                 <a href="https://github.com/chenyufan1202" target="new">
                                 <div class="contact-card">
                                     <i class="icofont-github"></i>
+                                    <p class="info">
+                                        github.com/chenyufan1202
+                                    </p>
                                 </div>
                                 </a>
                             </div>
@@ -105,6 +111,9 @@
                                 <a href="https://www.instagram.com/v.i.c.k1202?igsh=cHFoM2Npd2UwcjJp" target="new">
                                 <div class="contact-card">
                                     <i class="icofont-instagram"></i>
+                                    <p class="info">
+                                        v.i.c.k1202
+                                    </p>
                                 </div>
                                 </a>
                             </div>
@@ -145,7 +154,17 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="footer-area">
-                                <p>&copy; 版權所有，<a href="https://github.com/chenyufan1202" target="new"><u>范振宇</u></a>，2025</p>
+                                <p>&copy; 版權所有，<a href="https://github.com/chenyufan1202" target="new"><u>范振宇</u></a>，<span id="copyright-year"></span></p>
+                                <script>
+                                const startYear = 2025;
+                                const currentYear = new Date().getFullYear();
+
+                                const yearText = startYear === currentYear
+                                    ? startYear
+                                    : `${startYear}-${currentYear}`;
+
+                                document.getElementById("copyright-year").textContent = yearText;
+                                </script>
                             </div>
                         </div>
                     </div>
