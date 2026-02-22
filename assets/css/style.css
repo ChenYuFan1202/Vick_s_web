@@ -983,6 +983,120 @@ h4.page-nav {
     margin-top: 15px;
 }
 
+/* 標題與時間同行佈局 */
+.title-with-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title-with-date h4 {
+    margin-bottom: 0;
+    color: var(--main-color);
+    font-size: 20px;
+    transition: .3s;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.title-with-date .date {
+    margin-left: auto;
+}
+
+.title-with-date .date p {
+    writing-mode: initial;
+    padding: 5px 10px;
+    display: inline-block;
+    line-height: 20px;
+    margin: 0;
+}
+
+/* 主要專案獨立項目 */
+.project-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    margin: 0 -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-item:hover .date p {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+/* 專案列表文字換行對齊 */
+.project-item ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.project-item ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-top: 1px;
+}
+
+.project-item ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+/* 實習經歷項目 */
+.experience-item {
+    padding: 20px 0;
+}
+
+/* 實習經歷列表換行對齊 */
+.experience-item ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.experience-item ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-top: 1px;
+}
+
+.experience-item ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+/* 學歷列表換行對齊 */
+.award-item.education ol {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.award-item.education ol li {
+    position: relative;
+    padding-left: 10px;
+    margin-top: 1px;
+}
+
+.award-item.education ol li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+
+.experience-item:hover .date p {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
 .interest {
     display: flex;
     justify-content: center;
@@ -1024,6 +1138,17 @@ p.interest-name {
 .expert-box.education:hover .date p {
     background: var(--main-color);
     color: var(--white-color);
+}
+
+/* 專案區塊不使用容器級 hover，改用各專案獨立 hover */
+.expert-box.education:has(.project-item):hover .date p {
+    background: #efeeee;
+    color: var(--title-color);
+}
+
+.project-item:hover .date p {
+    background: var(--main-color) !important;
+    color: var(--white-color) !important;
 }
 
 .expert-box:hover .interest .interest-inner p {
@@ -1070,6 +1195,7 @@ img.work-img {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    border: 1px solid var(--main-color);
 }
 
 .work-info {
@@ -1124,6 +1250,7 @@ p.category-name {
     border-radius: 15px;
     overflow: hidden;
     position: relative;
+    border: 1px solid var(--main-color);
 }
 
 .store-info {

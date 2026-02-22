@@ -53,17 +53,17 @@
                     <div class="user-img">
                         <img src="assets/img/user/Vick.jpg" alt="">
                     </div>
-                    <h2 class="name">范振宇（Vick）</h2>
-                    <p class="user-role">清大服科所研究生（NTHU ISS）</p>
+                    <h2 class="name">范振宇 (Vick)</h2>
+                    <p class="user-role">清大服科所研究生 (NTHU ISS)</p>
                 </div>
 
                 <div class="menu">
                     <ul class="menu-ul">
-                        <li class="menu-list"><a href="index.html" class="menu-link"><span class="icofont-home"></span> Home</a></li>
-                        <li class="menu-list"><a href="about me.html" class="menu-link"><span class="icofont-notepad"></span> About me</a></li>
-                        <li class="menu-list"><a href="portfolio.html" class="menu-link"><span class="icofont-code-alt"></span> Portfolio</a></li>
-                        <li class="menu-list"><a href="stories.html" class="menu-link"><span class="icofont-oscommerce"></span> Stories</a></li>
-                        <li class="menu-list"><a href="contact.html" class="menu-link"><span class="icofont-contact-add"></span> Contact</a></li>
+                        <li class="menu-list"><a href="index.html" class="menu-link"><span class="icofont-home"></span>Home</a></li>
+                        <li class="menu-list"><a href="about me.html" class="menu-link"><span class="icofont-notepad"></span>About me</a></li>
+                        <li class="menu-list"><a href="portfolio.html" class="menu-link"><span class="icofont-code-alt"></span>Portfolio</a></li>
+                        <li class="menu-list"><a href="stories.html" class="menu-link"><span class="icofont-oscommerce"></span>Stories</a></li>
+                        <li class="menu-list"><a href="contact.html" class="menu-link"><span class="icofont-contact-add"></span>Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,6 +90,32 @@
                     </div>
 
                     <div class="row" data-ref="mixitup-container">
+                        <div data-ref="mixitup-target" class="col-md-4 col-sm-6 mb-4 mix ai">
+                            <a target="new" href="https://github.com/orgs/CSV-UPSTART3/repositories" class="work-name">
+                            <div class="work-card">
+                                <img style="width:100%; height:180px; object-fit:cover;" src="assets/img/user/SOA.png" alt="" class="work-img">
+                                <div class="work-info">
+                                    <div class="">
+                                        LingoBeats
+                                        <p class="category-name">AI</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div data-ref="mixitup-target" class="col-md-4 col-sm-6 mb-4 mix sql">
+                            <a target="new" href="https://github.com/PDDS-Team10/-Kadokawa-Game-Linkage" class="work-name">
+                            <div class="work-card">
+                                <img style="width:100%; height:180px; object-fit:cover;" src="assets/img/user/PDDS.png" alt="" class="work-img">
+                                <div class="work-info">
+                                    <div class="">
+                                        Kadokawa Game Linkage (KGL) 儀表板
+                                        <p class="category-name">SQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
                         <div data-ref="mixitup-target" class="col-md-4 col-sm-6 mb-4 mix ai">
                             <a target="new" href="https://youtu.be/GXH6qA9pmUM?si=9G76KjJA24ZNki7s" class="work-name">
                             <div class="work-card">
@@ -254,7 +280,17 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="footer-area">
-                                <p>&copy; 版權所有，<a href="https://github.com/chenyufan1202" target="new"><u>范振宇</u></a>，2025</p>
+                                <p>&copy; 版權所有，<a href="https://github.com/chenyufan1202" target="new"><u>范振宇</u></a>，<span id="copyright-year"></span></p>
+                                <script>
+                                const startYear = 2025;
+                                const currentYear = new Date().getFullYear();
+
+                                const yearText = startYear === currentYear
+                                    ? startYear
+                                    : `${startYear}-${currentYear}`;
+
+                                document.getElementById("copyright-year").textContent = yearText;
+                                </script>
                             </div>
                         </div>
                     </div>
