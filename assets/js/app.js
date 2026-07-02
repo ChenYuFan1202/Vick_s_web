@@ -57,16 +57,20 @@ $(window).on('load', function() {
 // FOR TOGGLE SWITCH DARK & LIGHT THEME
 const btn = document.querySelector(".night__mood");
 const theme = document.querySelector("#change-mood");
-const storedTheme = localStorage.getItem('#change-mood');
-if (storedTheme) {
-    theme.href = storedTheme;
+const storedTheme = localStorage.getItem("theme");
+
+if (storedTheme === "dark") {
+    theme.href = "assets/css/dark.css";
+} else {
+    theme.href = "assets/css/style.css";
 }
+
 btn.addEventListener("click", function() {
-    if (theme.getAttribute("href") == "assets/css/style.css") {
+    if (theme.getAttribute("href") === "assets/css/style.css") {
         theme.href = "assets/css/dark.css";
+        localStorage.setItem("theme", "dark");
     } else {
         theme.href = "assets/css/style.css";
+        localStorage.setItem("theme", "light");
     }
-    localStorage.setItem('#change-mood', theme.href)
-
 });
