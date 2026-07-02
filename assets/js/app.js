@@ -37,14 +37,29 @@ $(function() {
 
 // =========toggle icon=======
 // Hamburger-menu
-$('.hamburger-menu').on('click', function() {
-    $('.hamburger-menu .line-top, #menu').toggleClass('current');
-    $('.hamburger-menu .line-center').toggleClass('current');
-    $('.hamburger-menu .line-bottom').toggleClass('current');
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const sideBar = document.querySelector(".side-bar");
+
+function setSidebarOpen(isOpen) {
+    sideBar.classList.toggle("active", isOpen);
+    document.querySelector(".hamburger-menu .line-top").classList.toggle("current", isOpen);
+    document.querySelector(".hamburger-menu .line-center").classList.toggle("current", isOpen);
+    document.querySelector(".hamburger-menu .line-bottom").classList.toggle("current", isOpen);
+}
+
+hamburgerMenu.addEventListener("click", function(event) {
+    event.stopPropagation();
+    setSidebarOpen(!sideBar.classList.contains("active"));
 });
 
-$(".hamburger-menu").click(function() {
-    $(".side-bar").toggleClass("active");
+document.addEventListener("click", function(event) {
+    const isSidebarOpen = sideBar.classList.contains("active");
+    const clickedInsideSidebar = sideBar.contains(event.target);
+    const clickedHamburger = hamburgerMenu.contains(event.target);
+
+    if (isSidebarOpen && !clickedInsideSidebar && !clickedHamburger) {
+        setSidebarOpen(false);
+    }
 });
 
 // ===========preloader=============
