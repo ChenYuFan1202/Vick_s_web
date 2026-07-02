@@ -24,9 +24,11 @@
 }
 
 @media screen and (max-width:992px) {
-    .education {
+    .education,
+    .experience-list,
+    .project-list {
         display: block;
-        padding: 40px 25px;
+        padding: 28px 25px 40px;
     }
 }
 

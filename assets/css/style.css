@@ -966,12 +966,16 @@ h4.page-nav {
     border-right: 0;
 }
 
-.education {
+.education,
+.experience-list,
+.project-list {
     display: block;
-    padding: 40px 25px;
+    padding: 28px 25px 40px;
 }
 
-.education .date p {
+.education .date p,
+.experience-list .date p,
+.project-list .date p {
     writing-mode: initial;
     padding: 5px 10px;
     display: inline-block;
@@ -1023,6 +1027,7 @@ h4.page-nav {
 
 .project-item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .project-item:hover .date p {
@@ -1051,7 +1056,21 @@ h4.page-nav {
 
 /* 實習經歷項目 */
 .experience-item {
+    border-bottom: 1px solid #eee;
     padding: 20px 0;
+    margin: 0 -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.experience-item:hover .date p {
+    background: var(--main-color);
+    color: var(--white-color);
 }
 
 /* 實習經歷列表換行對齊 */
@@ -1092,11 +1111,6 @@ h4.page-nav {
     left: 0;
 }
 
-.experience-item:hover .date p {
-    background: var(--main-color);
-    color: var(--white-color);
-}
-
 .interest {
     display: flex;
     justify-content: center;
@@ -1133,22 +1147,6 @@ p.interest-name {
 .expert-box:hover .interest .interest-inner .interest-icon {
     background: var(--main-color);
     color: var(--white-color);
-}
-
-.expert-box.education:hover .date p {
-    background: var(--main-color);
-    color: var(--white-color);
-}
-
-/* 專案區塊不使用容器級 hover，改用各專案獨立 hover */
-.expert-box.education:has(.project-item):hover .date p {
-    background: #efeeee;
-    color: var(--title-color);
-}
-
-.project-item:hover .date p {
-    background: var(--main-color) !important;
-    color: var(--white-color) !important;
 }
 
 .expert-box:hover .interest .interest-inner p {
@@ -1631,9 +1629,11 @@ p.comment-mes {
 }
 
 @media screen and (max-width:992px) {
-    .education {
+    .education,
+    .experience-list,
+    .project-list {
         display: block;
-        padding: 40px 25px;
+        padding: 28px 25px 40px;
     }
 }
 
