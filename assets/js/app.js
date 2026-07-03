@@ -22,7 +22,7 @@ $(function() {
     var url = window.location.href;
     url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
     url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
-    url = url.substr(url.lastIndexOf("/") + 1);
+    url = decodeURIComponent(url.substr(url.lastIndexOf("/") + 1));
 
     if (url == '') {
         url = 'index.html';
