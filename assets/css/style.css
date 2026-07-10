@@ -1618,10 +1618,22 @@ p.comment-mes {
     .content-wrapper {
         margin-left: 0;
     }
+    body.sidebar-open {
+        overflow: hidden;
+        touch-action: none;
+    }
+    body.sidebar-open::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .48);
+        z-index: 98;
+        pointer-events: auto;
+    }
     .side-bar.active {
         width: 300px;
         height: 100vh;
-        /* z-index: 99; */
+        z-index: 99;
     }
     .hamburger-menu {
         display: block;
