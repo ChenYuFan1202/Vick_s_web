@@ -42,6 +42,7 @@ const sideBar = document.querySelector(".side-bar");
 
 function setSidebarOpen(isOpen) {
     sideBar.classList.toggle("active", isOpen);
+    document.body.classList.toggle("sidebar-open", isOpen);
     document.querySelector(".hamburger-menu .line-top").classList.toggle("current", isOpen);
     document.querySelector(".hamburger-menu .line-center").classList.toggle("current", isOpen);
     document.querySelector(".hamburger-menu .line-bottom").classList.toggle("current", isOpen);
@@ -58,6 +59,12 @@ document.addEventListener("click", function(event) {
     const clickedHamburger = hamburgerMenu.contains(event.target);
 
     if (isSidebarOpen && !clickedInsideSidebar && !clickedHamburger) {
+        setSidebarOpen(false);
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && sideBar.classList.contains("active")) {
         setSidebarOpen(false);
     }
 });
